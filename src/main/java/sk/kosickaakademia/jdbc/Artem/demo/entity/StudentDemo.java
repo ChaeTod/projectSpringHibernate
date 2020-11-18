@@ -1,15 +1,13 @@
 package sk.kosickaakademia.jdbc.Artem;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "student")
 public class StudentDemo {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // to generate mySQL database ids with autoincrement
     @Column(name = "id")
     private int id;
 
